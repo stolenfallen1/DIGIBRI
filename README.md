@@ -12,3 +12,4 @@ You need the following:
 * PHP
 * MYSQL
 * Code editor of choice -> VSCode / Sublime text
+edit
