@@ -1,0 +1,284 @@
+/* PLAY WITH THESE COLOR
+F59292
+000000
+FFFFFF
+D70505
+6D6DC8
+212529
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Style the navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #262626;
+    height: 85px;
+    width: 100%;
+}
+#navbar ul {
+    float: right;
+    margin-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+#navbar ul li a {
+    color: white;
+    font-size: 25px;
+    margin-right: 20px;
+    padding: 3px 3px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: "Trirong", serif;
+}
+#navbar a:hover {
+    color: #F59292;
+    text-decoration: underline;
+}
+.checkbtn {
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+/* HOME SECTION */
+#home-section {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.9)), url(../home-img.jpeg) no-repeat center;
+	background-size: cover;
+}
+#home-section h1 {
+	font-size: 80px;
+	color: #FFFFFF;
+	font-family: "Audiowide", sans-serif;
+}
+#home-section h2 {
+	font-size: 45px;
+    font-style: italic;
+	color: #FFFFFF;
+	font-family: "Trirong", serif;
+}
+#home-section button {
+    padding: 16px;
+	background-color: #262626;
+	color: #FFFFFF;
+	text-decoration: none;
+	border: none;
+	border-radius: 10px;
+	font-family: "Audiowide", sans-serif;
+    border: 1px solid #D70505;
+	font-size: 19px;
+	cursor: pointer;
+}
+#home-section button:hover {
+    border: 1px solid #FFFFFF;
+}
+/* NEWS SECTION */
+#news-section {
+    padding: 25px;
+    background-color: #F59292;
+}
+.news-header {
+    text-align: center;
+}
+.news-header h1 {
+    font-size: 45px;
+    font-family: "Audiowide", sans-serif;
+}
+.news-header u {
+    font-size: 25px;
+    font-family: "Trirong", serif;
+}
+/* HORIZONTAL SCROLLING */
+.media-scroller {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 23%;
+    /* SCROLLING PROWESS */
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+.media-element {
+    cursor: pointer;
+}
+.media-element img {
+    width: 300px;
+    height: 425px;
+}
+.media-element img:hover {
+    border: 2px solid #D70505;
+}
+.media-element p {
+    font-style: italic;
+    font-size: 20px;
+    font-family: "Trirong", serif;
+}
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+}
+.snaps-inline > * {
+    scroll-snap-align: start;
+}
+/* CONTACT SECTION */
+#contact-section {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.9)), url(../home-img.jpeg) no-repeat center;
+	background-size: cover;
+}
+#contact-section h1 {
+    color: #FFFFFF;
+    padding-top: 150px;
+    text-align: center;
+    font-family: "Audiowide", sans-serif;
+    font-size: 75px;
+}
+#contact-section h2 {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Trirong", serif;
+    font-size: 40px;
+    font-style: italic;
+}
+#contact-section div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+#contact-section a {
+    color: #FFFFFF;
+    font-size: 40px;
+}
+#contact-section div a:hover {
+    color: #F59292;
+    font-size: 50px;
+    padding: 3px 8px 3px 8px;
+    border: 2px solid #D70505;
+    border-radius: 10px;
+}
+
+
+/* media query breakpoints 992px, 768px, 600px */
+@media (max-width: 992px) 
+{
+    /* HOME SECTION */
+    #home-section h1 {
+        font-size: 60px;
+    }
+    #home-section h2 {
+        font-size: 30px;
+    }
+    #home-section button {
+        padding: 15px;
+        font-size: 17px;
+    }
+    /* CONTACT SECTION */
+    #contact-section h1 {
+        font-size: 60px;
+    }
+    #contact-section h2 {
+        font-size: 30px;
+    }
+    #contact-section a {
+        font-size: 35px;
+    }
+    #contact-section div a:hover {
+        font-size: 45px;
+    }  
+}
+@media (max-width: 768px) 
+{
+    /* NAV SECTION */
+    .checkbtn {
+        display: block;
+    }
+    #navbar ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #262626;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    #navbar nav ul li a {
+        font-size: 20px;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    /* HOME SECTION */
+    #home-section h1 {
+        font-size: 50px;
+    }
+    #home-section h2 {
+        font-size: 20px;
+    }
+    #home-section button {
+        padding: 14px;
+        font-size: 16px;
+    }
+    /* CONTACT SECTION */
+    #contact-section h1 {
+        font-size: 50px;
+    }
+    #contact-section h2 {
+        font-size: 20px;
+    }
+    #contact-section a {
+        font-size: 30px;
+    }
+    #contact-section div a:hover {
+        font-size: 40px;
+    }
+}
+@media (max-width: 600px) 
+{
+    /* HOME SECTION */
+    #home-section h1 {
+        font-size: 45px;
+    }
+    #home-section h2 {
+        font-size: 15px;
+    }
+    #home-section button {
+        padding: 13px;
+        font-size: 14px;
+    }
+    /* CONTACT SECTION */
+    #contact-section h1 {
+        font-size: 45px;
+    }
+    #contact-section h2 {
+        font-size: 15px;
+    }
+    #contact-section a {
+        font-size: 20px;
+    }
+    #contact-section div a:hover {
+        font-size: 30px;
+    }
+}
